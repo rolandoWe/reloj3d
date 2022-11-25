@@ -1,0 +1,245 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container-fluid{
+    border: solid black 1px;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: rgb(159, 159, 159);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    
+}
+.caja{
+    background-color: rgb(157, 157, 157);
+    width:60%;
+    height:80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    /* transform-style: preserve-3d; */
+    perspective: 1000px;
+
+    /* transform: rotatex(35deg); */
+}
+.caja_reloj{
+    width:240px;
+    height:300px;
+    border:solid rgb(71, 71, 71) 2px;
+    border-radius: 40px;
+    box-shadow: 1px 1px 10px 15px rgb(95, 95, 95);
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    animation: animar infinite linear 30s;
+}
+@keyframes animar{
+0%{
+transform: rotatex(-13deg) rotateY(-13deg);
+}
+50%{
+transform: rotatex(15deg) rotateY(15deg);
+}
+100%{
+transform: rotatex(-13deg) rotateY(-13deg);
+}
+}
+.caratula{
+    position: relative;
+    width:85%;
+    height: 90%;
+    /* border: solid black 10px; */
+    background-color: rgb(7, 117, 243);
+    border-radius: 38px;
+   z-index: 1000;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ animation: fondo infinite linear 35s;
+}
+@keyframes fondo{
+    0%{background-color: blue;}
+    20%{background-color: rgb(255, 0, 0);}
+    30%{background-color: rgb(255, 166, 0);}
+    40%{background-color: purple;}
+    50%{background-color: peru;}
+    60%{background-color: rgb(0, 0, 0);}
+    70%{background-color: rgb(251, 0, 255);}
+    80%{background-color: rgb(38, 255, 0);}
+    90%{background-color: rgb(0, 251, 255);}
+    100%{background-color: blue;}
+}
+.dif_top,.dif_bottom{
+    position: absolute;
+    display: inline-block;
+    width:100%;
+    height: 50px;
+    box-shadow: 0 0 15px 15px rgb(171, 171, 171);
+    /* background-color: grey; */
+    border-radius: 20%;
+}
+.dif_top{
+    top: -27%;
+
+}
+.dif_bottom{
+    bottom: -28%;
+}
+.dif_left,.dif_right{
+    position: absolute;
+    height: 100%;
+    width:50px;
+    background: white;
+    border-radius: 20%;
+    box-shadow: 0 0 15px 15px rgb(171, 171, 171);
+
+}
+.dif_right{
+    right: -36%;
+}
+.dif_left{
+    left: -38%;
+    z-index: 10px;
+}
+.pantalla{
+    width: 96%;
+    height: 96%;
+    background-image: linear-gradient(45deg,orange, purple,blue);
+    border-radius: 35px;
+   overflow: hidden;
+   color: white;
+}
+/* _____________ */
+.dia{
+    display: inline-block;
+    width:100%;
+    /* background-color: aliceblue; */
+    text-align: right;
+    padding-right: 20%;
+    box-sizing: border-box;
+    padding-top: 10px;
+    font-size: 23px;
+}
+.caja_hora{
+    width:100%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.am_pm{
+    width:40px;
+    height:40px;
+    background-color: rgb(255, 0, 0,.1);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    animation: fondo infinite linear 50s;
+}
+.hora{
+    width: 70%;
+    height:50px;
+    line-height: 44px;
+    /* background-color: aliceblue; */
+    font-size: 53px;
+    padding: 0;
+}
+.mensaje{
+    padding: 0;
+    width:100%;
+    padding: 10px 0;
+    /* height: 50px; */
+    /* background-color: rgb(126, 214, 214); */
+}
+.mensaje span{
+    display: inline-block;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 20px;
+}
+.caja_fecha{
+    /* background-color: yellowgreen; */
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    /* padding-left: 10px; */
+}
+.spiner_fecha,.seg,.color_tiempo{
+    width:50px;
+    height:50px;
+    background-color: rgb(240, 248, 255,.1);
+    border-radius: 50%;
+}
+.spiner_fecha{
+    position: relative;
+    border-top: orange solid 4px;
+    border-left: orange solid 4px;
+    border-right: orange solid 4px;
+    border-bottom: transparent solid 1px;
+}
+.spiner_fecha span{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.mes{
+    text-align: center;
+    font-size: 18px;
+}
+.seg{
+  font-size: 28px;
+  text-align: center;
+  line-height: 50px;
+  /* box-shadow: 0 0 16px 2px blue; */
+}
+.dia_anio{
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    font-size: 12px;
+    background-color: orange;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+.color_tiempo{
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    line-height: 50px;
+    overflow: hidden;
+}
+.color_tiempo::after,.color_tiempo::before{
+    content: '';
+    width:100%;
+    height:100%;
+    background-color: rgb(4, 0, 255,.6);
+    position: absolute;
+    left: 0;
+    transform: rotate(45deg);
+}
+.color_tiempo::after{
+    top: -90%;
+
+}
+.color_tiempo::before{
+    bottom: -90%;
+}
+@media(max-width:575px){
+    .caja{
+        width: 90%;
+    }
+}
+

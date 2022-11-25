@@ -59,3 +59,25 @@ function reloj(){
 }
 reloj()
 setInterval(reloj,1000)
+
+let punto='';
+function putuar(){
+    [12].forEach(function(p){
+        Array(p).fill('').forEach(function(x,d){
+            punto+=([...Array(d+1).fill("<span class='puntos'>!¡</span>")].join(''))
+        })
+    })
+
+    document.querySelector('.mensaje').innerHTML=punto;
+   let puntito= document.querySelectorAll('.puntos');
+
+
+    function animar(){
+       for(let p=0;p<puntito.length;p++){
+        let minu=[p]/100+5;
+        puntito[p].style.animation="animar_puntos "+minu+"s infinite"
+       }
+    }
+    animar()
+}
+putuar()

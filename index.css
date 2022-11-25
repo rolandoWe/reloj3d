@@ -197,6 +197,7 @@ transform: rotatex(-13deg) rotateY(-13deg);
 .mes{
     text-align: center;
     font-size: 18px;
+    line-height: 40px;
 }
 .seg{
   font-size: 28px;
